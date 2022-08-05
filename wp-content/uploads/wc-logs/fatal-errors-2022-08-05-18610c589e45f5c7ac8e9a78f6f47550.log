@@ -74,3 +74,41 @@ Stack trace:
 
 2022-08-05T05:11:00+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-template-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 40
 
+2022-08-05T05:45:02+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_custom_do_shortcode() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\inc\storefront-custom-template-functions.php:208
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-includes\class-wp-hook.php(307): storefront_custom_featured_products(Array)
+#1 F:\laragon\www\store-front-custom\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 F:\laragon\www\store-front-custom\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#3 F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\template-homepage.php(28): do_action('homepage_sectio...')
+#4 F:\laragon\www\store-front-custom\wp-includes\template-loader.php(106): include('F:\\laragon\\www\\...')
+#5 F:\laragon\www\store-front-custom\wp-blog-header.php(19): require_once('F:\\laragon\\www\\...')
+#6 F:\laragon\www\store-front-custom\index.php(17): require('F:\\laragon\\www\\...')
+#7 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\inc\storefront-custom-template-functions.php on line 208
+
+2022-08-05T05:48:06+00:00 CRITICAL syntax error, unexpected end of file in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\inc\storefront-custom-template-functions.php on line 429
+
+2022-08-05T05:48:17+00:00 CRITICAL syntax error, unexpected end of file in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\inc\storefront-custom-template-functions.php on line 429
+
+2022-08-05T07:57:38+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 121
+
+2022-08-05T08:10:21+00:00 CRITICAL Uncaught Error: Call to undefined function best_seller_rest_api() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:137
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-blog-header.php(13): require_once('F:\\laragon\\www\\...')
+#4 F:\laragon\www\store-front-custom\index.php(17): require('F:\\laragon\\www\\...')
+#5 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 137
+
+2022-08-05T08:10:22+00:00 CRITICAL Uncaught Error: Call to undefined function best_seller_rest_api() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:137
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-blog-header.php(13): require_once('F:\\laragon\\www\\...')
+#4 F:\laragon\www\store-front-custom\index.php(17): require('F:\\laragon\\www\\...')
+#5 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 137
+

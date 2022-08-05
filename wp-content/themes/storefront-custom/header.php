@@ -41,3 +41,7 @@
                 </div>
             </div>
         </nav>
+<?php 
+        $day = date("d");
+     
+     var_dump( get_option('best_seller_'.$day ) );
