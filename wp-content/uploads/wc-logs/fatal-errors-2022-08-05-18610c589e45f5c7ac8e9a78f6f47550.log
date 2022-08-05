@@ -1,0 +1,76 @@
+2022-08-05T04:39:08+00:00 CRITICAL require(): Failed opening required 'inc/class-storefront-custom.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 27
+
+2022-08-05T04:40:23+00:00 CRITICAL require(): Failed opening required 'inc/class-storefront-custom.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 27
+
+2022-08-05T04:41:09+00:00 CRITICAL require(): Failed opening required 'inc/class-storefront-custom.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 27
+
+2022-08-05T04:41:15+00:00 CRITICAL require(): Failed opening required 'inc/class-storefront-custom.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 27
+
+2022-08-05T04:43:09+00:00 CRITICAL require(): Failed opening required 'inc/customizer/class-storefront-customizer.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 28
+
+2022-08-05T04:44:35+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_custom_is_woocommerce_activated() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:31
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-blog-header.php(13): require_once('F:\\laragon\\www\\...')
+#4 F:\laragon\www\store-front-custom\index.php(17): require('F:\\laragon\\www\\...')
+#5 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 31
+
+2022-08-05T04:45:04+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_custom_is_woocommerce_activated() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:31
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-blog-header.php(13): require_once('F:\\laragon\\www\\...')
+#4 F:\laragon\www\store-front-custom\index.php(17): require('F:\\laragon\\www\\...')
+#5 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 31
+
+2022-08-05T04:45:09+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_custom_is_woocommerce_activated() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:31
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-admin\admin-ajax.php(22): require_once('F:\\laragon\\www\\...')
+#4 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 31
+
+2022-08-05T04:45:57+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_custom_is_woocommerce_activated() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:31
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-blog-header.php(13): require_once('F:\\laragon\\www\\...')
+#4 F:\laragon\www\store-front-custom\index.php(17): require('F:\\laragon\\www\\...')
+#5 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 31
+
+2022-08-05T04:47:09+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_custom_is_woocommerce_activated() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php:31
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-settings.php(566): include()
+#1 F:\laragon\www\store-front-custom\wp-config.php(103): require_once('F:\\laragon\\www\\...')
+#2 F:\laragon\www\store-front-custom\wp-load.php(50): require_once('F:\\laragon\\www\\...')
+#3 F:\laragon\www\store-front-custom\wp-admin\admin-ajax.php(22): require_once('F:\\laragon\\www\\...')
+#4 {main}
+  thrown in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 31
+
+2022-08-05T04:47:11+00:00 CRITICAL require(): Failed opening required 'inc/storefront-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 31
+
+2022-08-05T05:09:04+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-woocommerce-template-hooks.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 39
+
+2022-08-05T05:09:05+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-woocommerce-template-hooks.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 39
+
+2022-08-05T05:09:41+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-template-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 40
+
+2022-08-05T05:09:42+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-template-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 40
+
+2022-08-05T05:10:09+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 41
+
+2022-08-05T05:10:10+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 41
+
+2022-08-05T05:11:00+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-template-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 40
+
+2022-08-05T05:11:00+00:00 CRITICAL require(): Failed opening required 'inc/woocommerce/storefront-custom-woocommerce-template-functions.php' (include_path='.;F:/laragon/etc/php/pear') in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\functions.php on line 40
+
