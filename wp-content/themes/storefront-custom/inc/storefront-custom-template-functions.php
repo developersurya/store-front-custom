@@ -201,7 +201,7 @@ if ( ! function_exists( 'storefront_custom_featured_products' ) ) {
 				'orderby'    => 'date',
 				'order'      => 'desc',
 				'visibility' => 'featured',
-				'title'      => __( 'We Recommend', 'storefront' ),
+				'title'      => __( 'We Recommend featured', 'storefront' ),
 			)
 		);
 
@@ -223,17 +223,29 @@ if ( ! function_exists( 'storefront_custom_featured_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-featured-products" aria-label="' . esc_attr__( 'Featured Products', 'storefront' ) . '">';
+			echo '<section class="page-section bg-light" aria-label="' . esc_attr__( 'Featured Products', 'storefront' ) . '" id="portfolio">';
+			
+			echo '<div class="container">';
 
 			do_action( 'storefront_custom_homepage_before_featured_products' );
 
-			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+			echo '<div class="text-center">';
+
+			echo '<h2 class="section-heading text-uppercase">' . wp_kses_post( $args['title'] ) . '</h2>';
+
+			echo '<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.' . wp_kses_post( $args['title_1'] ) . '</h3>';
 
 			do_action( 'storefront_custom_homepage_after_featured_products_title' );
+
+			echo '</div>';
+
+			
 
 			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_custom_homepage_after_featured_products' );
+
+			echo '</div>';
 
 			echo '</section>';
 		}
@@ -390,7 +402,7 @@ if ( ! function_exists( 'storefront_custom_best_selling_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="' . esc_attr__( 'Best Selling Products', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="' . esc_attr__( 'Best Selling Products', 'storefront' ) . '" id="portfolio">';
 
 			do_action( 'storefront_custom_homepage_before_best_selling_products' );
 
@@ -405,7 +417,7 @@ if ( ! function_exists( 'storefront_custom_best_selling_products' ) ) {
 			echo '</section>';
 		}
 	}
-
+}
 	if ( ! function_exists( 'storefront_custom_home_banner' ) ) {
 		/**
 		 * Display home banner
@@ -416,14 +428,62 @@ if ( ! function_exists( 'storefront_custom_best_selling_products' ) ) {
 		 * @return void
 		 */
 		function storefront_custom_home_banner(){
-			echo '<!-- Masthead-->
-			<header class="masthead">
+			$url = get_template_directory_uri()."/assets/img/header-bg.jpg";
+			?>
+			
+			<header class="masthead" style="background-image:url(<?php echo $url;?>">
 				<div class="container">
 					<div class="masthead-subheading">Welcome To Our Studio!</div>
 					<div class="masthead-heading text-uppercase">Its Nice To Meet You</div>
 					<a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
 				</div>
-			</header>';
+			</header>
+			<?php
 		}
 	}
-}
+
+
+	add_action('woocommerce_before_shop_loop_item','woocommerce_before_shop_loop_item_wrapper_start',1);
+	add_action('woocommerce_after_shop_loop_item','woocommerce_before_shop_loop_item_wrapper_end',11);
+	add_action('woocommerce_after_shop_loop_item','woocommerce_before_shop_loop_item_wrapper_end',11);
+	add_action('woocommerce_before_shop_loop_item_title','woocommerce_before_shop_loop_item_caption_start',11);
+
+
+	
+	function woocommerce_before_shop_loop_item_wrapper_start(){
+		echo '<div class="portfolio-item">';
+	}
+	function woocommerce_before_shop_loop_item_caption_start(){
+		echo '<div class="portfolio-caption">';
+	}
+	
+	function woocommerce_before_shop_loop_item_wrapper_end(){
+		echo '</div>';
+	}
+
+
+	// Add wrapper button and qty in sigle page 
+	add_action('woocommerce_before_add_to_cart_button','add_to_cart_wrapper_start',1);
+	function add_to_cart_wrapper_start(){
+		echo '<div class="add-to-cart-wrapper">';
+	}
+
+	add_action('woocommerce_after_add_to_cart_button','add_to_cart_wrapper_end',1);
+	function add_to_cart_wrapper_end(){
+		echo '</div>';
+	}
+
+
+	// Change in add to cart button,
+	add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
+	function replace_loop_add_to_cart_button( $button, $product  ) {
+		if( has_term( 'cat-1', 'product_cat' ) ){
+		// Category 1 Button text here
+		$button_text = __( "Add to cart 1", "woocommerce" );
+		return '<a class="btn btn-primary " href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+		} else {
+		// Category 2 Button text here
+		$button_text = __( "Add to cart 2", "woocommerce" );
+		return '<a class="btn btn-primary " href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+		}
+	}

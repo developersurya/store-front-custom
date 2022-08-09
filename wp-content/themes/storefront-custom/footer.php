@@ -11,7 +11,12 @@
 
 		
 
-	<?php do_action( 'storefront_before_footer' ); ?>
+	<?php 
+	// var_dump(get_option('best_seller_'));
+
+	// var_dump( array_slice(get_option('best_seller_') , 0, 3));
+	
+	do_action( 'storefront_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-full">
@@ -54,3 +59,5 @@
 
 </body>
 </html>
+
+

@@ -97,7 +97,7 @@ if( ! class_exists( 'Storefront_Custom_WooCommerce' ) ) :
 
 			//$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_style( 'storefront-custom-woocommerce-style', get_template_directory_uri() . '/assets/css/styles.css', array(  ), $storefront_custom_version );
+			wp_enqueue_style( 'storefront-custom-woocommerce-style', get_template_directory_uri() . '/assets/css/styles.css', array(  ), '321313' );
 			wp_style_add_data( 'storefront-custom-woocommerce-style', 'rtl', 'replace' );
 
 			wp_register_script( 'storefront-custom-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), $storefront_custom_version, true );
