@@ -193,6 +193,10 @@ if ( ! function_exists( 'storefront_custom_featured_products' ) ) {
 	 * @return void
 	 */
 	function storefront_custom_featured_products( $args ) {
+
+		$title= get_field('fp_title', get_the_ID() );
+		$subtitle= get_field('fp_subtitle', get_the_ID() );
+		$number_of_products= get_field('fb_number_of_products', get_the_ID() );
 		$args = apply_filters(
 			'storefront_custom_featured_products_args',
 			array(
@@ -201,7 +205,7 @@ if ( ! function_exists( 'storefront_custom_featured_products' ) ) {
 				'orderby'    => 'date',
 				'order'      => 'desc',
 				'visibility' => 'featured',
-				'title'      => __( 'We Recommend featured', 'storefront' ),
+				'title'      => $title,
 			)
 		);
 
@@ -210,7 +214,7 @@ if ( ! function_exists( 'storefront_custom_featured_products' ) ) {
 			apply_filters(
 				'storefront_custom_featured_products_shortcode_args',
 				array(
-					'per_page'   => intval( $args['limit'] ),
+					'per_page'   => intval( $number_of_products ),
 					'columns'    => intval( $args['columns'] ),
 					'orderby'    => esc_attr( $args['orderby'] ),
 					'order'      => esc_attr( $args['order'] ),
@@ -223,7 +227,7 @@ if ( ! function_exists( 'storefront_custom_featured_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="page-section bg-light" aria-label="' . esc_attr__( 'Featured Products', 'storefront' ) . '" id="portfolio">';
+			echo '<section class="page-section bg-light" aria-label="' . esc_attr__( $subtitle ) . '" id="portfolio">';
 			
 			echo '<div class="container">';
 
@@ -428,13 +432,16 @@ if ( ! function_exists( 'storefront_custom_best_selling_products' ) ) {
 		 * @return void
 		 */
 		function storefront_custom_home_banner(){
+			$banner_title = get_field('banner_title');
+			$banner_subtitle = get_field('banner_subtitle');
+			$banner_image = get_field('banner_image');
 			$url = get_template_directory_uri()."/assets/img/header-bg.jpg";
 			?>
 			
-			<header class="masthead" style="background-image:url(<?php echo $url;?>">
+			<header class="masthead" style="background-image:url(<?php echo $banner_image['url'];?>">
 				<div class="container">
-					<div class="masthead-subheading">Welcome To Our Studio!</div>
-					<div class="masthead-heading text-uppercase">Its Nice To Meet You</div>
+					<div class="masthead-subheading"><?php echo $banner_title ;?></div>
+					<div class="masthead-heading text-uppercase"><?php echo $banner_subtitle ;?></div>
 					<a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
 				</div>
 			</header>
