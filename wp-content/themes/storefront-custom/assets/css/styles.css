@@ -11670,3 +11670,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 .woocommerce ul.products li.product a img {
     margin: 0;
 }
+
+#mainNav {
+    background-color: #212529;
+}

@@ -30,5 +30,5 @@ get_header(); ?>
  </section>
 
 <?php
-do_action( 'storefront_sidebar' );
+//do_action( 'storefront_sidebar' );
 get_footer();

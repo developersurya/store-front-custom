@@ -8,7 +8,7 @@
  * @package storefront
  */
 
-do_action( 'storefront_loop_before' );
+do_action( 'storefront_custom_loop_before' );
 
 while ( have_posts() ) :
 	the_post();
@@ -27,4 +27,4 @@ endwhile;
  *
  * @hooked storefront_paging_nav - 10
  */
-do_action( 'storefront_loop_after' );
+do_action( 'storefront_custom_loop_after' );

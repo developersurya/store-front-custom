@@ -15,6 +15,6 @@
 	 * @hooked custom_storefront_page_header          - 10
 	 * @hooked custom_storefront_page_content         - 20
 	 */
-	do_action( 'custom_storefront_page' );
+	do_action( 'general_storefront_page' );
 	?>
 </article><!-- #post-## -->

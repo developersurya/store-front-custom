@@ -1,0 +1,11 @@
+2022-08-23T04:15:16+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_post_thumbnail() in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\inc\storefront-custom-template-functions.php:833
+Stack trace:
+#0 F:\laragon\www\store-front-custom\wp-includes\class-wp-hook.php(307): storefront_custom_page_header('')
+#1 F:\laragon\www\store-front-custom\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 F:\laragon\www\store-front-custom\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#3 F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\content-page.php(18): do_action('general_storefr...')
+#4 F:\laragon\www\store-front-custom\wp-includes\template.php(772): require('F:\\laragon\\www\\...')
+#5 F:\laragon\www\store-front-custom\wp-includes\template.php(716): load_template('F:\\laragon\\www\\...', false, Array)
+#6 F:\laragon\www\store-front-custom\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#7 F:\laragon\www\store-front-custom\wp-cont in F:\laragon\www\store-front-custom\wp-content\themes\storefront-custom\inc\storefront-custom-template-functions.php on line 833
+
